@@ -54,13 +54,24 @@ Figure -02 HALF Subtractor
 
 Developed by: RegisterNumber:*/
 ~~~
-module exp3(a,b,C,D,S,B);
+i)HALF ADDER
+
+module ha(a,b,sum,carry);
 input a,b;
-output S,D,C,B;
-assign S=a^b;
-assign C=a&b;
-assign D=a&b;
-assign B=~a&b;
+output sum,carry;
+assign sum= (a ^ b);
+assign carry= ( a & b);
+endmodule
+~~~
+~~~
+
+ii)HALF SUBTRACTOR
+
+module hs(a,b,difference,borrow);
+input a,b;
+output difference,borrow;
+assign difference= (a ^ b);
+assign borrow= ( ~a & b);
 endmodule
 ~~~
 
